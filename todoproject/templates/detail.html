@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+ <h3 style="color:white;">Upcomming Tasks</h3>
+
+                <div class="shadow card" >
+                    <h5 class="card-title">{{task.name}}</h5>
+                    <div class="card-body">
+                          <p class="card-text"><b>{{task.priority}}</b></p>
+                            <p class="card-text"><b>{{task.date}}</b></p>
+                          <a href="{% url 'delete' task.id %}" class="btn btn-primary">Done</a>
+                          <a href="{% url 'update' task.id %}" class="btn btn-info">Update</a>
+                    </div>
+                </div><br>
+
+
+{% endblock %}
